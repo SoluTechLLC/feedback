@@ -20,6 +20,7 @@ export class FeedbackDialogComponent implements AfterViewInit {
   public vars: object = {};
   public feedback = new Feedback();
   public includeScreenshot: boolean = true;
+  public includeHardware: boolean = true;
   public showSpinner = true;
   public screenshotEle: HTMLElement;
   public drawCanvas: HTMLCanvasElement;
@@ -118,6 +119,14 @@ export class FeedbackDialogComponent implements AfterViewInit {
     } else {
       delete this.feedback['screenshot'];
       this.showSpinner = true;
+    }
+  }
+
+  public isIncludeHardware() {
+    if (this.includeHardware) {
+
+    } else {
+
     }
   }
 
