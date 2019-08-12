@@ -45,6 +45,7 @@ export class FeedbackDialogComponent implements AfterViewInit {
               private el: ElementRef) {
     this.feedback = new Feedback();
     this.feedback.description = '';
+    this.feedback.os = true;
     this.vars = this.feedbackService.initialVariables;
   }
 
@@ -124,9 +125,9 @@ export class FeedbackDialogComponent implements AfterViewInit {
 
   public isIncludeHardware() {
     if (this.includeHardware) {
-
+      this.feedback.os = true;
     } else {
-
+      this.feedback.os = false;
     }
   }
 
